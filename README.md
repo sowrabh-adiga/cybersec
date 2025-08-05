@@ -1,7 +1,7 @@
 # cybersec
 Collection of implementation of hardware and software vulnerabilities 
 
-
+following [video](https://youtu.be/V4E_0N_PvW8?si=66t5n3IhERz9fXCB) from the [youtube channel](https://www.youtube.com/@SideChannelSecurity) by Prof. Daniel Gruss
 # Side Channel Basics
 
 ## Remote Timing Attacks
