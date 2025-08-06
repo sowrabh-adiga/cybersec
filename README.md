@@ -2,6 +2,9 @@
 Collection of implementation of hardware and software vulnerabilities 
 
 following [video](https://youtu.be/V4E_0N_PvW8?si=66t5n3IhERz9fXCB) from the [youtube channel](https://www.youtube.com/@SideChannelSecurity) by Prof. Daniel Gruss
+
+Note : `The notebook simulates timing differences without actual real-world effects, but demonstrates core principles.`
+
 # Side Channel Basics
 
 ## Remote Timing Attacks
