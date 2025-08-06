@@ -64,7 +64,7 @@ Frequency of guesses: Counter({'9': 5, '5': 2, '0': 2, '7': 1})
 The most frequent guess across all 10 runs is: '9'
 The actual first digit of the password is: '9'
 ```
-![](https://github.com/sowrabh-adiga/cybersec/blob/main/files/download%20(1).png)
+![](https://github.com/sowrabh-adiga/cybersec/blob/main/files/download%20(2).png)
 
 ### Implementing for whole 4 bits of key 
 The code remains same for most part except for last bit. The last bit exits immediately after the match so has very less delay. so only the last bit has to have min delay values in the median delay list.
