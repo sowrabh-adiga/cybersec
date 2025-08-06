@@ -24,8 +24,8 @@ Timing attacks exploit execution time differences, as seen in Spectre etc, to le
 - **Code**: [timing_attack_simulation.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/timing_attack_simulation.ipynb)
 
 ## Results
-- 500,000 trials: Guessed “9875” correctly, aleast over 7/10 iterations for each digit.
-- 40 trials: Guessed “1349,” showing low-trial limitations.
+- 40 trials, as per the video: Guessed “9870,” showing low-trial limitations.
+- 500,000 trials: Guessed “9875” correctly, atleast over 7/10 iterations for each digit.
 - Plot: Visualizes guess frequencies.
 
 ## Relevance
@@ -77,8 +77,9 @@ else:
 ```
 
 output looks like this:
+see full output in cell 4 in [timing_attack_simulation.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/timing_attack_simulation.ipynb)
 ```output
-<clipped: see all output and the plots in the notebook mentioned in : Implementation:code section>
+<clipped>
 .
 .
 .
