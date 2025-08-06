@@ -19,7 +19,7 @@ This project simulates a timing-based side-channel attack to crack a password, i
 Timing attacks exploit execution time differences, as seen in Spectre etc, to leak data like passwords.
 
 ## Implementation
-- **Environment**: Google collab, Jupyter
+- **Environment**: Google collab, Jupyter, python 3.11.13
 - **Steps**: Simulated a vulnerable password check, measured execution times over 500,000 trials, and used median/frequency analysis to guess digits.
 - **Code**: [side_channel_.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/side_channel_.ipynb)
 
