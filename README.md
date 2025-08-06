@@ -20,12 +20,12 @@ Timing attacks exploit execution time differences, as seen in Spectre etc, to le
 
 ## Implementation
 - **Environment**: Google collab, Jupyter, python 3.11.13
-- **Steps**: Simulated a vulnerable password check, measured execution times over 500,000 trials, and used median/frequency analysis to guess digits.
+- **Steps**: Simulated a vulnerable password check, measured execution times over 40 trials. Then over 100,000 trials, using median/frequency analysis to guess digits for more accuracy.
 - **Code**: [timing_attack_simulation.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/timing_attack_simulation.ipynb)
 
 ## Results
 - 40 trials, as per the video: Guessed “9870,” showing low-trial limitations.
-- 500,000 trials: Guessed “9875” correctly, atleast over 7/10 iterations for each digit.
+- 100,000 trials: Guessed “9875” correctly, atleast over 7/10 iterations for each digit.
 - Plot: Visualizes guess frequencies.
 
 ## Relevance
@@ -41,7 +41,7 @@ The timing delay for sucessive bits can be used to find what bits of the key are
 The `unlock` function below simulates an online form that takes the key and checks element by element for a match. The password check fails when one of the elements doesn't match with password.
 Why it's vulnerable: The time it takes to execute this function is directly proportional to the number of correct leading characters in the key.
 
-Initally, I have assumed that there is no limit for how many password checks can be done.
+I have assumed that there is no limit for how many password checks can be done for the  500,000 trials.
 
 A time diffrence between each combination is being implemented by `time` python library:
 ```python
