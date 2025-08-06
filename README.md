@@ -13,7 +13,7 @@ Note : `The notebook simulates timing differences without actual real-world effe
 **By Sowrabh Adiga**  
 
 ## Introduction
-This project simulates a timing-based side-channel attack to crack a password, implemented in [side_channel_.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/side_channel_.ipynb), inspired by [video](https://youtu.be/V4E_0N_PvW8?si=66t5n3IhERz9fXCB) from the [youtube channel](https://www.youtube.com/@SideChannelSecurity) by Prof. Daniel Gruss
+This project simulates a timing-based side-channel attack to crack a password, implemented in [timing_attack_simulation.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/timing_attack_simulation.ipynb), inspired by [video](https://youtu.be/V4E_0N_PvW8?si=66t5n3IhERz9fXCB) from the [youtube channel](https://www.youtube.com/@SideChannelSecurity) by Prof. Daniel Gruss
 
 ## Background
 Timing attacks exploit execution time differences, as seen in Spectre etc, to leak data like passwords.
@@ -21,7 +21,7 @@ Timing attacks exploit execution time differences, as seen in Spectre etc, to le
 ## Implementation
 - **Environment**: Google collab, Jupyter, python 3.11.13
 - **Steps**: Simulated a vulnerable password check, measured execution times over 500,000 trials, and used median/frequency analysis to guess digits.
-- **Code**: [side_channel_.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/side_channel_.ipynb)
+- **Code**: [timing_attack_simulation.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/timing_attack_simulation.ipynb)
 
 ## Results
 - 500,000 trials: Guessed “9875” correctly, aleast over 7/10 iterations for each digit.
@@ -64,7 +64,7 @@ Frequency of guesses: Counter({'9': 5, '5': 2, '0': 2, '7': 1})
 The most frequent guess across all 10 runs is: '9'
 The actual first digit of the password is: '9'
 ```
-![](https://github.com/sowrabh-adiga/cybersec/blob/main/files/download.png)
+![](https://github.com/sowrabh-adiga/cybersec/blob/main/files/download%20(1).png)
 
 ### Implementing for whole 4 bits of key 
 The code remains same for most part except for last bit. The last bit exits immediately after the match so has very less delay. so only the last bit has to have min delay values in the median delay list.
@@ -78,7 +78,7 @@ else:
 
 output looks like this:
 ```output
-<clipped>
+<clipped: see all output and the plots in the notebook mentioned in : Implementation:code section>
 .
 .
 .
