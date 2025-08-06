@@ -24,7 +24,7 @@ Timing attacks exploit execution time differences, as seen in Spectre etc, to le
 - **Code**: [side_channel_.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/side_channel_.ipynb)
 
 ## Results
-- 500,000 trials: Guessed “9875” correctly.
+- 500,000 trials: Guessed “9875” correctly, aleast over 7/10 iterations for each digit.
 - 40 trials: Guessed “1349,” showing low-trial limitations.
 - Plot: Visualizes guess frequencies.
 
@@ -34,7 +34,7 @@ Inspired by Gruss’s lecture and CoreSec’s work on Spectre, CacheWarp (Kogler
 ## Future Work
 Explore cache-based attacks (e.g., prime+probe) and hardware defenses.
 
-# Important details
+## Important details
 
 The timing delay for sucessive bits can be used to find what bits of the key are valid.
 
