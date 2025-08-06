@@ -1,7 +1,7 @@
 # cybersec
 Collection of implementation of hardware and software vulnerabilities 
 
-following [video](https://youtu.be/V4E_0N_PvW8?si=66t5n3IhERz9fXCB) from the [youtube channel](https://www.youtube.com/@SideChannelSecurity) by Prof. Daniel Gruss
+
 
 Note : `The notebook simulates timing differences without actual real-world effects, but demonstrates core principles.`
 
@@ -9,22 +9,37 @@ Note : `The notebook simulates timing differences without actual real-world effe
 
 ## Remote Timing Attacks
 
-The timing delay for sucessive bits can be used to find what bits of the key are valid. [side_channel_.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/side_channel_.ipynb) has the implementation of Remote Timing Attacks
+# Timing Attack Simulation for Password Cracking
+**By Sowrabh Adiga**  
+
+## Introduction
+This project simulates a timing-based side-channel attack to crack a password, implemented in [side_channel_.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/side_channel_.ipynb), inspired by [video](https://youtu.be/V4E_0N_PvW8?si=66t5n3IhERz9fXCB) from the [youtube channel](https://www.youtube.com/@SideChannelSecurity) by Prof. Daniel Gruss
+
+## Background
+Timing attacks exploit execution time differences, as seen in Spectre etc, to leak data like passwords.
+
+## Implementation
+- **Environment**: Google collab, Jupyter
+- **Steps**: Simulated a vulnerable password check, measured execution times over 500,000 trials, and used median/frequency analysis to guess digits.
+- **Code**: [side_channel_.ipynb](https://github.com/sowrabh-adiga/cybersec/blob/main/side_channel_.ipynb)
+
+## Results
+- 500,000 trials: Guessed “9875” correctly.
+- 40 trials: Guessed “1349,” showing low-trial limitations.
+- Plot: Visualizes guess frequencies.
+
+## Relevance
+Inspired by Gruss’s lecture and CoreSec’s work on Spectre, CacheWarp (Kogler).
+
+## Future Work
+Explore cache-based attacks (e.g., prime+probe) and hardware defenses.
+
+# Important details
+
+The timing delay for sucessive bits can be used to find what bits of the key are valid.
 
 The `unlock` function below simulates an online form that takes the key and checks element by element for a match. The password check fails when one of the elements doesn't match with password.
 Why it's vulnerable: The time it takes to execute this function is directly proportional to the number of correct leading characters in the key.
-```python
-def unlock(key):
-    if len(key) != len(password):
-        return False
-
-    for i in range(len(key)):
-        if key[i] == password[i]:
-            continue
-        else:
-            return False
-    return True
-```
 
 Initally, I have assumed that there is no limit for how many password checks can be done.
 
